@@ -1,0 +1,71 @@
+@import "../variables";
+
+a {
+  color: $color-primary;
+}
+
+code {
+  font-family: $font-serif;
+}
+
+p, main {
+  padding: 0 1rem;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  color: $color-text-secondary;
+  padding-left: 1rem;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "header  nav" "aside   aside" "main    main";
+  align-items: stretch;
+}
+
+.header {
+  grid-area: header;
+}
+
+.nav {
+  grid-area: nav;
+  & a {
+    color: $color-text-secondary;
+  }
+}
+
+.header, .nav {
+  margin: 0;
+  padding: 1rem;
+
+  font-family: $font-serif;
+  background-color: $color-primary;
+  color: $color-text-secondary;
+}
+
+.aside {
+  grid-area: aside;
+  font-family: $font-serif;
+  * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+.main {
+  grid-area: main;
+}

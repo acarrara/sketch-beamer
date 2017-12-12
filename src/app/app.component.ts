@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CardModule} from '../card/card.module';
 
 @Component({
-  selector: 'bp-root',
+  selector: 'sb-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  title = 'bp';
+
+  modules = [
+    CardModule
+  ];
+
 }

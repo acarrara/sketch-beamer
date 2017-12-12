@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('beamer-pen App', () => {
+describe('sketch-beamer App', () => {
   let page: AppPage;
 
   beforeEach(() => {

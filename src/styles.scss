@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&text=.BCGHINSYabcdefghiklmnoprstuvwy%43');
+
+@import "variables";
+
+html, body {
+  margin: 0;
+}
+
+.sketch {
+  font-family: $font-mono;
+  font-size: 1rem;
+
+  border: 1px solid $color-primary;
+}
+
+.beamer:empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $font-serif;
+  color: $color-text-light;
+
+  &:after {
+    content: "Ctrl+S to reload the view";
+  }
+}
