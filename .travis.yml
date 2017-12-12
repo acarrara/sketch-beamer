@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+before_install:
+  - npm i --silent --no-optional -g @angular/cli@1.6.0
+  - npm i --silent --no-optional -g angular-cli-ghpages@0.5.2
+script:
+  - ng build --base-href "https://acarrara.github.io/sketch-beamer/"
+  - ngh --repo=https://GH_TOKEN@github.com/acarrara/sketch-beamer.git
+matrix:
+  fast_finish: true
+branches:
+  only:
+  - master
+env:
+  matrix:
+    secure: k9eVUM1SUULucPUoI1lyIXwmar3wxyTrl46U/OWV/NVi0oSQZbjpM5Yt99HySkHdAKRo+y6yvrCavMUSHa0ZqQByPsdvUptHwRIAX8azihTzUeB3HGvXuexNgFnwWT354LWghO2PSd7Qdmy+JmON29oK8IyBXChwTsPanH+t0baVn1fiynDWAPdH5Df7kReWi5fedubNJ0SKkPc8B/MJEuTE+doL5PlxA5l6Iw+wXHzJjKY19uWUZNK8JBCuX0K6+BV9RHvlDgtNFukVodg6gxe5MppAlroZkP21goDlR9pTsdxw0AQuIUhCyZo9m6tafIqjw5tdWAQMUyVGrZxl1x0TZW3TBjXttsaQnLW6a7xkwE/fznoFDWKFsw+pLk7pyiZS5/5c026Yi7MQRNnNJxF0MRv7ZKUEQ9wcsWcbbf5B++IEX/snoK/ysJBVZEExb3eSdCZ//rinjTm55SdeuLxDV3vn5TqVW1uPw/HeW5O42igR9vS+yRS6kaeT+DVDnUEb8VywTaZ5evFDdkXA2UwMQrNspPESqXJUzTSKF8z++gKu/h9IhhP+BXPcREjTRKu00KWPiYA2b0SzHta+xJWUj7cqhTTaIsk0naUfxOM5JkShBNiny/vTqTrkIln9OEsvTaq7FuLk7eu0WwLzR+wzYWG9VWbq7yC4njeGboU=
